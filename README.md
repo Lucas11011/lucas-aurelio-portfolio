@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Lucas Aurelio Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modern, animated single-page portfolio highlighting frontend, UX, and product design work. Built with React, ScrollReveal, VanillaTilt, and a custom cursor trail for extra polish.
 
-## Available Scripts
+## Highlights
 
-In the project directory, you can run:
+- **Two-tier tab navigation** with animated underlines for quick jumps between Home/Skills/Contact and Experience/Projects/UX/Certifications
+  - `useRef` + dynamic inline styles move the underline to the active button on every tab change.
+- **Theming and accessibility**: dark mode powered by CSS custom properties, icon inversion, and reduced-motion friendly transitions
+  - Toggling a `dark-mode` class swaps CSS variables and applies icon filter adjustments globally.
+- **Motion-rich storytelling**: ScrollReveal sequences, carousel sliders, 3D hero image tilt, and cursor trail follow effect
+  - ScrollReveal `useEffect` hooks, CSS keyframes, and VanillaTilt animate sections, cards, and the hero image.
+- **Interactive CTAs**: email copy-to-clipboard, downloadable resume, and external link affordances
+  - Clipboard API handles email copy, anchor tags expose `download` attributes, and hover states show link icons.
+- **Responsive layout** focused on mobile first, with tailored typography and spacing at common breakpoints
+  - Component styles rely on CSS custom properties plus breakpoint-specific flex/grid adjustments.
 
-### `npm start`
+## Sections Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Home**: Gradient last-name hero, product-focused summary, location chip, “My Focus” tech row, and pill-shaped social/resume CTAs.
+- **Skills**: Categorized skills grid (see `src/components/Skills.js`) fed by plain arrays for easy edits.
+- **Contact**: Carded layout with light-blue links, copy-to-clipboard button, and responsive stacking.
+- **Experience & Projects**: Dual carousels with arrow buttons, pagination dots, swipe gestures, and sequential slide-in/out animations.
+- **Cursor**: Lightweight custom cursor trail rendered via DOM nodes to add ambient motion across the site.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **Runtime**: React 19, React Scripts 5
+- **Styling**: Vanilla CSS modules + CSS variables
+- **Animation libraries**: ScrollReveal for scroll-triggered sequences, VanillaTilt for hero depth effect
+- **Tooling**: npm scripts (`start`, `build`, `test`) and CRA development server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+```
+src/
+├── components/     # UI sections, navigation, cursor
+├── css/            # One stylesheet per component for scoped styles
+├── icons/          # SVG iconography
+├── imgs/           # Optimized raster assets
+└── resume/         # Downloadable PDF
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js 18+ (tested on LTS)
+- npm 9+
 
-### `npm run eject`
+### Installation & Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install        # install dependencies
+npm start          # run dev server at http://localhost:3000
+npm run build      # production bundle in build/
+npm test           # CRA test runner
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Hot reloading is enabled out of the box via `react-scripts start`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Development Notes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Animated Tab Underlines
+`useRef` stores button nodes so the underline can sync to width/position on every tab change:
 
-## Learn More
+```javascript
+const activeButton = topTabsRef.current[activeTopTab];
+setTopUnderlineStyle({
+  width: `${activeButton.offsetWidth}px`,
+  left: `${activeButton.offsetLeft}px`
+});
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### ScrollReveal Sequences
+Sections register reveal animations inside `useEffect`, giving staggered enter transitions and keeping animations in sync with tab swaps.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Top-Tab Fade
+Each Home/Skills/Contact panel mounts inside a keyed wrapper with the `.top-content-fade` animation, producing a short opacity/translate reveal whenever the active tab changes.
 
-### Code Splitting
+### Cursor Trail
+`Cursor` component emits dots at the previous pointer coordinates every ~150 ms (or when the pointer travels >14px), interpolates in-between dots for quick movements, and schedules fade/removal timers for each node to avoid DOM leaks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Theming
+The entire palette lives in `:root` and `.dark-mode` tokens (`src/App.css`). Toggling the body class flips the experience instantly without recalculating styles in JS.
 
-### Analyzing the Bundle Size
+### Carousels (Experience & Projects)
+- Buttons call a guarded transition helper that plays exit/enter animations (`slide-out-*` / `slide-in-*`) defined in the respective CSS files.
+- `aria-live="polite"` containers announce slide changes for assistive tech.
+- Swipe gestures are supported on touch devices via `onTouchStart`/`onTouchEnd` handlers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Customization
 
-### Making a Progressive Web App
+- **Content**: update the component data arrays (skills, projects, experience) directly in their respective files.
+- **Carousels**: edit the `experiences` or `projects` arrays and adjust SVG/icon imports at the top of each component.
+- **Colors/Fonts**: adjust CSS variables in `src/App.css`; the change propagates to every component.
+- **Assets**: drop new icons/images in `src/icons` or `src/imgs` and import them where needed.
+- **Contact links**: tweak card colors and link hues inside `src/css/Contact.css` to match new branding.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Deployment
 
-### Advanced Configuration
+The default CRA build outputs to `build/`. Deploy the folder to any static host (Vercel, Netlify, GitHub Pages). Example Vercel flow:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. `npm run build`
+2. Upload `build/` or connect the repo and set the build command to `npm run build` with output `build`.
 
-### Deployment
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Email**: lucas.aurelio.n@gmail.com
+- **LinkedIn**: [Lucas Aurelio](https://www.linkedin.com/in/lucas-aurelio-n)
+- **GitHub**: [@Lucas11011](https://github.com/Lucas11011)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+

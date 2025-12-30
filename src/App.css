@@ -1,38 +1,359 @@
-.App {
-  text-align: center;
+/* Global Resets and Variables */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #f7f7f7; /* Light background */
+  --text-color: #000000;
+  --secondary-color: #253a58ff; /* Blue for links/active */
+  --accent-color: #253A58; /* Same as secondary for light mode */
+  --border-color: #ddd;
+  --font-family: 'Inter', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
+.dark-mode {
+  --bg-color: #333333;
+  --text-color: #eee; 
+  --secondary-color: #9BB1DB;
+  --accent-color: #9BB1DB;
+  --border-color: #444;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #333333;
+}
+
+/* Dark mode icon filters */
+body.dark-mode .arrow-icon,
+body.dark-mode .link-icon,
+body.dark-mode .copy-icon,
+body.dark-mode .location-icon,
+body.dark-mode .theme-icon {
+  filter: brightness(0) invert(1);
+}
+
+.App {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 125px;
+}
+
+.domain {
+  font-size: 1.2em;
+  font-weight: bold;
+  flex: 1;
+}
+
+.mobile-profile {
+  display: none;
+  margin: 20px 0;
+}
+
+.mobile-profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
+.top-tabs {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  flex: 1;
+  justify-content: center;
+}
+
+.top-tabs button {
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0;
+  padding-bottom: 5px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.top-tabs button.active {
+  font-weight: bold;
+}
+
+.top-tabs .tab-underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.theme-switcher {
+  font-size: 1em;
+  cursor: default;
+  flex: 1;
+  text-align: right;
+  background: none;
+  border: none;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.theme-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.theme-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Top Section */
+.top-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack on mobile */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 250px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.top-content-fade {
+  width: 100%;
+  animation: top-tab-fade 0.7s ease;
 }
 
-@keyframes App-logo-spin {
+@keyframes top-tab-fade {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.left-content {
+  flex: 1;
+  text-align: left;
+  margin-bottom: 20px; /* Space on mobile */
+}
+
+.right-profile {
+  margin-left: 0; /* No margin on mobile */
+}
+
+.profile-picture {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--border-color);
+}
+
+/* Bottom Section */
+.bottom-section {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  /* margin-bottom: 20px; */
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 18px 28px;
+  background: var(--bg-color);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.bottom-tabs button {
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0;
+  padding-bottom: 5px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.bottom-tabs button.active {
+  font-weight: bold;
+}
+
+.bottom-tabs .tab-underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.bottom-content {
+  padding: 20px;
+  margin-top: 25px;
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  background: var(--bg-color);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+
+  .domain {
+    flex: none;
+  }
+
+  .mobile-profile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .top-tabs {
+    gap: 15px;
+  }
+
+  .right-profile {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .top-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left-content {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+
+  .right-profile {
+    margin-left: 40px;
+  }
+}
+
+/* 866px breakpoint - smaller fonts */
+@media (max-width: 866px) {
+  .home-content h1 {
+    font-size: 1.5em;
+  }
+
+  .home-content h2 {
+    font-size:0.8em;
+  }
+
+  .home-content p {
+    font-size: 0.7em;
+  }
+
+  .top-tabs {
+    gap: 20px;
+  }
+
+  .bottom-tabs {
+    gap: 30px;
+  }
+  img.theme-icon {
+    margin-top: 15px;
+  }
+}
+
+/* 500px breakpoint - even smaller fonts and increased padding */
+@media (max-width: 500px) {
+  .App {
+    padding: 30px;
+    padding-bottom: 0px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .domain {
+    font-size: 1em;
+  }
+
+  .home-content h1 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+  }
+
+  .home-content h2 {
+    font-size: 0.85em;
+    margin-bottom: 15px;
+  }
+
+  .home-content p {
+    font-size: 0.9em;
+  }
+
+  .top-tabs {
+    gap: 12px;
+  }
+
+  .top-tabs button {
+    font-size: 0.85em;
+  }
+
+  .bottom-tabs {
+    gap: 15px;
+  }
+
+  .bottom-tabs button {
+    font-size: 0.85em;
+  }
+
+  .bottom-content {
+    padding: 15px;
+  }
+  main.top-section {
+    margin-bottom: 150px;
+  }
+
 }
