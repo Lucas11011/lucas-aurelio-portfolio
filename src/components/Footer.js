@@ -19,9 +19,9 @@ function Footer() {
                 <a href="https://www.linkedin.com/in/lucas-aurelio-n" target="_blank" rel="noopener noreferrer" className="footer-social-link">
                     <img src={linkedinIcon} alt="LinkedIn" className="footer-social-icon" />
                 </a>
-                <a href="mailto:lucas.aure.io.n@gmail.com" className="footer-social-link">
+                {/* <a href="mailto:lucas.aure.io.n@gmail.com" className="footer-social-link">
                     <img src={gmailIcon} alt="Gmail" className="footer-social-icon" />
-                </a>
+                </a> */}
                 <a href="https://github.com/Lucas11011" target="_blank" rel="noopener noreferrer" className="footer-social-link">
                     <img src={githubIcon} alt="GitHub" className="footer-social-icon dark-mode-white" />
                 </a>

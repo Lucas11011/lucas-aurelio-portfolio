@@ -23,8 +23,8 @@ function Home() {
                 I design and build expressive, high-performing web experiences focused on quality, usability, and accessibility.
             </p>
             <div className="home-location-chip">
-                <img src={locationIcon} alt="Location" className="location-icon" title="Pelham, NH" />
-                Pelham, NH
+                <img src={locationIcon} alt="Location" className="location-icon" title="NH" />
+                NH
             </div>
             <div className="tech-stack">
                 <span className="tech-stack-label">My Focus:</span>
@@ -42,9 +42,9 @@ function Home() {
                 <a href="https://www.linkedin.com/in/lucas-aurelio-n" target="_blank" rel="noopener noreferrer" className="social-link">
                     <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
                 </a>
-                <a href="mailto:lucas.aurelio.n@gmail.com" className="social-link">
+                {/* <a href="mailto:lucas.aurelio.n@gmail.com" className="social-link">
                     <img src={gmailIcon} alt="Gmail" className="social-icon" />
-                </a>
+                </a> */}
                 <a href="https://github.com/Lucas11011" target="_blank" rel="noopener noreferrer" className="social-link">
                     <img src={githubIcon} alt="GitHub" className="social-icon dark-mode-white" />
                 </a>

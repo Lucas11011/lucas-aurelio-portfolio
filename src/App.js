@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 import ScrollReveal from 'scrollreveal';
-import ProfilePicture from './imgs/pfp.jpg';
+import ProfilePicture from './imgs/pfp.png';
 import sunIcon from './icons/brightness-high.svg';
 import moonIcon from './icons/moon-stars-fill.svg';
 
