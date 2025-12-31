@@ -17,7 +17,7 @@ function Certifications() {
         {
             id: 1,
             logo: metaLogo,
-            title: 'Meta Front-End Developer Professional Certificate',
+            title: 'Meta Frontend Developer Professional Certificate',
             description: 'Developed practical front-end web development skills in HTML, CSS, and JavaScript to build responsive, interactive websites, and learned to use modern tools and frameworks like React, Bootstrap, Git/GitHub, and Figma for design, version control, and UI/UX workflows. Applied learnings through projects that helped solidify real-world coding abilities and build a portfolio demonstrating readiness for front-end developer roles.',
             link: 'https://www.coursera.org/professional-certificates/meta-front-end-developer/paidmedia?utm_medium=sem&utm_source=gg&utm_campaign=b2c_namer_high-ltv_meta_ftcof_professional-certificates_px_dr_bau_gg_sem_pr-bd_us-ca_en_m_hyb_25-09_developer&campaignid=23005687385&adgroupid=186568886552&device=c&keyword=&matchtype=&network=g&devicemodel=&creativeid=775977448762&assetgroupid=&targetid=dsa-2382539641348&extensionid=&placement=&gad_source=1&gad_campaignid=23005687385&gbraid=0AAAAADdKX6Yw37rETDfgdwz2-fpBcd7DG&gclid=Cj0KCQiAgbnKBhDgARIsAGCDdlfSP-yGE2fMduwjKgV6Hxs957bZCB0JdtrXAE-djIPuljaVWko2HrkaAlhnEALw_wcB',
             techStack: [
