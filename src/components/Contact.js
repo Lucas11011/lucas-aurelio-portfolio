@@ -4,7 +4,7 @@ import '../css/Contact.css';
 import boxArrowIcon from '../icons/box-arrow-up-left.svg';
 import downloadIcon from '../icons/download.svg';
 import copyIcon from '../icons/copy.svg';
-import resume from '../resume/LucasAuerlio_Resume.pdf';
+import resume from '../resume/LucasAurelio_Resume.pdf';
 
 function Contact() {
     const [copyMessage, setCopyMessage] = useState('');
