@@ -71,12 +71,15 @@ function App() {
     };
   }, []);
 
-  // Toggle dark mode class on body element
+  // Toggle dark mode class on body and html elements
   useEffect(() => {
+    const root = document.documentElement;
     if (isDarkMode) {
       document.body.classList.add('dark-mode');
+      root.classList.add('dark-mode');
     } else {
       document.body.classList.remove('dark-mode');
+      root.classList.remove('dark-mode');
     }
   }, [isDarkMode]);
 
@@ -118,6 +121,33 @@ function App() {
       easing: 'ease-in-out',
       reset: false
     });
+  }, []);
+
+  // Toggle html class when scrolled to bottom for overscroll color
+  useEffect(() => {
+    const root = document.documentElement;
+
+    const updateAtBottom = () => {
+      const scrollTop = window.scrollY || root.scrollTop;
+      const viewportHeight = window.innerHeight || root.clientHeight;
+      const docHeight = root.scrollHeight;
+      const atBottom = scrollTop + viewportHeight >= docHeight - 2;
+
+      if (atBottom) {
+        root.classList.add('at-bottom');
+      } else {
+        root.classList.remove('at-bottom');
+      }
+    };
+
+    updateAtBottom();
+    window.addEventListener('scroll', updateAtBottom, { passive: true });
+    window.addEventListener('resize', updateAtBottom);
+
+    return () => {
+      window.removeEventListener('scroll', updateAtBottom);
+      window.removeEventListener('resize', updateAtBottom);
+    };
   }, []);
 
   // Render top section content based on active tab

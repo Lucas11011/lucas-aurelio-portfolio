@@ -3,7 +3,7 @@
   padding: 0;
   margin-top: 40px;
   padding-bottom: 20px;
-  background-color: var(--secondary-color);
+  background-color: var(--footer-bg-color);
   color: #ffffff;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -25,10 +25,6 @@
 
 .back-to-top:hover {
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-body.dark-mode .footer {
-  background-color: #181818;
 }
 
 /* .footer {

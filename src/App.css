@@ -6,6 +6,7 @@
   --text-color: #000000;
   --secondary-color: #253a58ff; /* Blue for links/active */
   --accent-color: #253A58; /* Same as secondary for light mode */
+  --footer-bg-color: var(--secondary-color);
   --border-color: #ddd;
   --font-family: 'Inter', sans-serif;
 }
@@ -15,6 +16,7 @@
   --text-color: #eee; 
   --secondary-color: #9BB1DB;
   --accent-color: #9BB1DB;
+  --footer-bg-color: #181818;
   --border-color: #444;
 }
 
@@ -31,6 +33,14 @@ html, body {
 body.dark-mode {
   background-color: #333333;
 }
+
+html.at-bottom {
+  background-color: var(--footer-bg-color);
+}
+
+/* html.dark-mode {
+  background-color: #333333;
+} */
 
 /* Dark mode icon filters */
 body.dark-mode .arrow-icon,
