@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import '../css/Home.css';
 import reactIcon from '../icons/React.svg';
 import jsIcon from '../icons/JavaScript.svg';
@@ -7,7 +7,7 @@ import cssIcon from '../icons/CSS3.svg';
 import figmaIcon from '../icons/Figma.svg';
 import locationIcon from '../icons/geo-alt-fill.svg';
 import linkedinIcon from '../icons/LinkedIn.svg';
-import gmailIcon from '../icons/gmail.png';
+// import gmailIcon from '../icons/gmail.png';
 import githubIcon from '../icons/GitHub.svg';
 import downloadIcon from '../icons/download.svg';
 import resume from '../resume/LucasAurelio_Resume.pdf';

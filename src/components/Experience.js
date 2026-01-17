@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import '../css/Experience.css';
 import sciquelLogo from '../imgs/sciquel_logo.jpg';
 import jackPortfolioLogo from '../imgs/JackPortfolio.png';
@@ -9,7 +9,7 @@ import tsIcon from '../icons/TypeScript.svg';
 import tailwindIcon from '../icons/Tailwind CSS.svg';
 import figmaIcon from '../icons/Figma.svg';
 import reactIcon from '../icons/React.svg';
-import jsIcon from '../icons/JavaScript.svg';
+// import jsIcon from '../icons/JavaScript.svg';
 import htmlIcon from '../icons/HTML5.svg';
 import cssIcon from '../icons/CSS3.svg';
 import githubIcon from '../icons/GitHub.svg';

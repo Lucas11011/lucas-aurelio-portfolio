@@ -55,8 +55,9 @@ function App() {
 
   // Initialize VanillaTilt 3D effect on profile picture
   useEffect(() => {
-    if (profilePictureRef.current && window.VanillaTilt) {
-      window.VanillaTilt.init(profilePictureRef.current, {
+    const element = profilePictureRef.current;
+    if (element && window.VanillaTilt) {
+      window.VanillaTilt.init(element, {
         max: 15,
         speed: 400,
         glare: true,
@@ -64,7 +65,6 @@ function App() {
       });
     }
     return () => {
-      const element = profilePictureRef.current;
       if (element && element.vanillaTilt) {
         element.vanillaTilt.destroy();
       }

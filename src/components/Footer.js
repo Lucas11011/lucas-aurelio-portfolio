@@ -1,8 +1,8 @@
 // Footer.js
-import React from 'react';
+// import React from 'react';
 import '../css/Footer.css';
 import linkedinIcon from '../icons/LinkedIn.svg';
-import gmailIcon from '../icons/gmail.png';
+// import gmailIcon from '../icons/gmail.png';
 import githubIcon from '../icons/GitHub.svg';
 
 function Footer() {

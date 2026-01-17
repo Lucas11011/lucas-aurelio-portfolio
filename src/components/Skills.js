@@ -1,5 +1,5 @@
 // Skills.js
-import React from 'react';
+// import React from 'react';
 import '../css/Skills.css';
 
 // Import icons
@@ -14,8 +14,8 @@ import cssIcon from '../icons/CSS3.svg';
 import reactIcon from '../icons/React.svg';
 import bootstrapIcon from '../icons/Bootstrap.svg';
 import tailwindIcon from '../icons/Tailwind CSS.svg';
-import vscodeIcon from '../icons/Visual Studio Code (VS Code).svg';
-import filezillaIcon from '../icons/FileZilla.svg';
+// import vscodeIcon from '../icons/Visual Studio Code (VS Code).svg';
+// import filezillaIcon from '../icons/FileZilla.svg';
 import figmaIcon from '../icons/Figma.svg';
 import gitIcon from '../icons/Git.svg';
 import githubIcon from '../icons/GitHub.svg';

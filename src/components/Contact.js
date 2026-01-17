@@ -1,24 +1,24 @@
 // Contact.js
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import '../css/Contact.css';
 import boxArrowIcon from '../icons/box-arrow-up-left.svg';
 import downloadIcon from '../icons/download.svg';
-import copyIcon from '../icons/copy.svg';
+// import copyIcon from '../icons/copy.svg';
 import resume from '../resume/LucasAurelio_Resume.pdf';
 
 function Contact() {
-    const [copyMessage, setCopyMessage] = useState('');
-    const email = 'lucas.aurelio.n@gmail.com';
+    // const [copyMessage, setCopyMessage] = useState('');
+    // const email = 'lucas.aurelio.n@gmail.com';
 
-    // Copy email to clipboard
-    const handleCopyEmail = () => {
-        navigator.clipboard.writeText(email).then(() => {
-            setCopyMessage('Copied!');
-            setTimeout(() => setCopyMessage(''), 2000);
-        }).catch(err => {
-            console.error('Failed to copy:', err);
-        });
-    };
+    // // Copy email to clipboard
+    // const handleCopyEmail = () => {
+    //     navigator.clipboard.writeText(email).then(() => {
+    //         setCopyMessage('Copied!');
+    //         setTimeout(() => setCopyMessage(''), 2000);
+    //     }).catch(err => {
+    //         console.error('Failed to copy:', err);
+    //     });
+    // };
 
     return (
         <div className="contact-content">
