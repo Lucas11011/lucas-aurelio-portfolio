@@ -21,8 +21,14 @@ function App() {
   // Tab navigation state for top and bottom sections
   const [activeTopTab, setActiveTopTab] = useState('Home');
   const [activeBottomTab, setActiveBottomTab] = useState('Experience');
-  // Dark mode toggle state
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // Dark mode toggle state (persisted)
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    try {
+      return localStorage.getItem('theme') === 'dark';
+    } catch {
+      return false;
+    }
+  });
 
   const topTabsRef = useRef({});
   const bottomTabsRef = useRef({});
@@ -80,6 +86,11 @@ function App() {
     } else {
       document.body.classList.remove('dark-mode');
       root.classList.remove('dark-mode');
+    }
+    try {
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    } catch {
+      // Ignore write errors (e.g., private mode)
     }
   }, [isDarkMode]);
 
