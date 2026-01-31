@@ -5,6 +5,8 @@ import ProfilePicture from './imgs/pfp.png';
 import sunIcon from './icons/brightness-high.svg';
 import moonIcon from './icons/moon-stars-fill.svg';
 
+import { Analytics } from '@vercel/analytics/react';
+
 // Import tab content components
 import Home from './components/Home';
 import Skills from './components/Skills';
@@ -282,6 +284,7 @@ function App() {
       </section>
 
       <Footer />
+      <Analytics />
     </div>
   );
 }
