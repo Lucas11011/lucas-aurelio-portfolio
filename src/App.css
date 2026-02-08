@@ -68,9 +68,12 @@ body.dark-mode .theme-icon {
 }
 
 .domain {
-  font-size: 1.2em;
+  font-size: 1.35em;
   font-weight: bold;
   flex: 1;
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
 .mobile-profile {
@@ -248,22 +251,39 @@ body.dark-mode .theme-icon {
 /* Responsiveness */
 @media (max-width: 900px) {
   .header {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "domain toggle"
+      "profile profile"
+      "tabs tabs";
+    align-items: center;
     margin-bottom: 20px;
     gap: 15px;
   }
 
   .domain {
+    grid-area: domain;
     flex: none;
+    justify-self: start;
+    align-self: center;
   }
 
   .mobile-profile {
+    grid-area: profile;
     display: flex;
     justify-content: center;
   }
 
   .top-tabs {
+    grid-area: tabs;
     gap: 15px;
+  }
+
+  .theme-switcher {
+    grid-area: toggle;
+    justify-self: end;
+    align-self: center;
   }
 
   .right-profile {
@@ -310,7 +330,7 @@ body.dark-mode .theme-icon {
     gap: 30px;
   }
   img.theme-icon {
-    margin-top: 15px;
+    margin-top: 0;
   }
 }
 
@@ -321,12 +341,16 @@ body.dark-mode .theme-icon {
     padding-bottom: 0px;
   }
 
+  .mobile-profile {
+    margin: 10px 0;
+  }
+
   .header {
     margin-bottom: 40px;
   }
 
   .domain {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   .home-content h1 {
@@ -363,7 +387,7 @@ body.dark-mode .theme-icon {
     padding: 15px;
   }
   main.top-section {
-    margin-bottom: 150px;
+    margin-bottom: 75px;
   }
 
 }

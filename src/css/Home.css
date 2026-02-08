@@ -30,6 +30,7 @@ h1 {
 .last-name-gradient {
   display: inline-block;
   background: linear-gradient(10deg, #253a58, #6b8de5 45%, #9bb1db);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -197,6 +198,8 @@ h1 {
   .home-content {
     margin-top: -10px;
     padding: 0 6px;
+    align-items: center;
+    text-align: center;
   }
 
   h1 {
@@ -210,17 +213,21 @@ h1 {
   }
 
   .home-summary {
-    font-size: 0.7em;
+    font-size: 0.66em;
     margin-top: 6px;
   }
 
   .tech-stack {
     gap: 8px;
     margin-top: 20px;
+    justify-content: center;
   }
 
   .tech-stack-label {
+    width: auto;
     font-size: 0.85em;
+    white-space: nowrap;
+    margin-right: 2px;
   }
 
   .tech-stack-icon {
@@ -233,13 +240,16 @@ h1 {
     gap: 10px;
     margin-top: 12px;
     font-size: 0.9em;
+    justify-content: center;
+    width: 100%;
   }
 
   .social-link {
     margin-top: 10px;
     gap: 4px;
-    width: calc(50% - 8px);
     justify-content: center;
+    width: 100%;
+    max-width: 360px;
   }
 
   .social-icon {
@@ -255,16 +265,21 @@ h1 {
     width: 16px;
     height: 16px;
   }
+
+  .home-location-chip {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 420px) {
   .home-summary {
-    font-size: 0.65em;
+    font-size: 0.62em;
   }
 
   .tech-stack-label {
-    width: 100%;
-    margin-bottom: 6px;
+    width: auto;
+    margin-bottom: 0;
   }
 
   .social-link {

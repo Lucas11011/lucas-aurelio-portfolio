@@ -10,7 +10,7 @@ import linkedinIcon from '../icons/LinkedIn.svg';
 // import gmailIcon from '../icons/gmail.png';
 import githubIcon from '../icons/GitHub.svg';
 import downloadIcon from '../icons/download.svg';
-import resume from '../resume/LucasAurelio_Resume.pdf';
+import resume from '../resume/Lucas_Aurelio_Resume.pdf';
 
 function Home() {
     return (
@@ -35,7 +35,7 @@ function Home() {
                 <img src={figmaIcon} alt="Figma" className="tech-stack-icon" title="Figma" />
             </div>
             <div className="social-links">
-                <a href={resume} download="LucasAurelio_Resume.pdf" className="social-link resume-link">
+                <a href={resume} download="Lucas_Aurelio_Resume.pdf" className="social-link resume-link">
                     <span>Resume</span>
                     <img src={downloadIcon} alt="Download" className="social-icon download-icon dark-mode-white" />
                 </a>
