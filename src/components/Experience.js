@@ -25,7 +25,7 @@ function Experience() {
             logo: sciquelLogo,
             company: 'SciQuel',
             siteUrl: 'https://sciquel.org',
-            title: 'Web Developer Intern',
+            title: 'Frontend Web Developer Intern',
             subtitle: 'SciQuel | November 2025 – Present',
             text: 'Contributed to frontend development for a science media organization, building responsive and accessible React components from Figma designs using TypeScript and CSS. Collaborated closely with designers and engineers to maintain visual consistency across the site and iterated on features through code reviews and GitHub-based workflows within an agile team.',
             techStack: [
