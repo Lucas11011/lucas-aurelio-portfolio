@@ -4,7 +4,8 @@ import '../css/Contact.css';
 import boxArrowIcon from '../icons/box-arrow-up-left.svg';
 import downloadIcon from '../icons/download.svg';
 // import copyIcon from '../icons/copy.svg';
-import resume from '../resume/Lucas_Aurelio_Resume.pdf';
+// import resume from '../resume/Lucas_Aurelio_Resume.pdf';
+import resume from '../resume/Lucas_Aurelio_Software_Engineer_Resume.pdf';
 
 function Contact() {
     // const [copyMessage, setCopyMessage] = useState('');
@@ -36,7 +37,7 @@ function Contact() {
             <p>GitHub: <a href="https://github.com/Lucas11011" target="_blank" rel="noopener noreferrer">
                 github.com/Lucas11011 <img src={boxArrowIcon} alt="" className="link-icon" />
             </a></p>
-            <p><a href={resume} download="Lucas_Aurelio_Resume.pdf">
+            <p><a href={resume} download="Lucas_Aurelio_Resume_Software_Engineer_Resume.pdf">
                 Download Resume <img src={downloadIcon} alt="" className="link-icon" />
             </a></p>
         </div>
