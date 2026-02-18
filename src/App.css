@@ -153,8 +153,8 @@ body.dark-mode .theme-icon {
   display: flex;
   flex-direction: column; /* Stack on mobile */
   align-items: center;
-  margin-bottom: 250px;
-  max-width: 900px;
+  margin-bottom: 148px;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
 }
