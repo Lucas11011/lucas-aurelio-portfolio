@@ -27,8 +27,8 @@ function Home() {
                 Software engineer building high-performance, scalable web applications with deep experience in modern frontend architecture.
             </p>
             <div className="home-location-chip">
-                <img src={locationIcon} alt="Location" className="location-icon" title="NH" />
-                NH
+                <img src={locationIcon} alt="Location" className="location-icon" title="NH/MA" />
+                NH / MA
             </div>
             <div className="tech-stack">
                 <span className="tech-stack-label">My Focus:</span>
