@@ -14,6 +14,7 @@ import htmlIcon from '../icons/HTML5.svg';
 import cssIcon from '../icons/CSS3.svg';
 import githubIcon from '../icons/GitHub.svg';
 import vercelIcon from '../icons/Vercel.svg';
+import NextJsIcon from '../icons/Next.js.png';
 
 const SLIDE_DURATION = 320;
 
@@ -29,6 +30,7 @@ function Experience() {
             subtitle: 'SciQuel | November 2025 – Present',
             text: 'Contributed to frontend development for a science media organization, building responsive and accessible React components from Figma designs using TypeScript and CSS. Collaborated closely with designers and engineers to maintain visual consistency across the site and iterated on features through code reviews and GitHub-based workflows within an agile team.',
             techStack: [
+                { icon: NextJsIcon, name: 'Next.js' },
                 { icon: reactIcon, name: 'React' },
                 { icon: tsIcon, name: 'TypeScript' },
                 { icon: tailwindIcon, name: 'Tailwind CSS' },

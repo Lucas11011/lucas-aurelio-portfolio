@@ -9,8 +9,8 @@ import locationIcon from '../icons/geo-alt-fill.svg';
 import linkedinIcon from '../icons/LinkedIn.svg';
 // import gmailIcon from '../icons/gmail.png';
 import typescriptIcon from '../icons/TypeScript.svg';
-import nodejsIcon from '../icons/Node.js.svg';
-// import nextjsIcon from '../icons/Next.js.svg';
+// import nodejsIcon from '../icons/Node.js.svg';
+import nextjsIcon from '../icons/Next.js.png';
 import githubIcon from '../icons/GitHub.svg';
 import downloadIcon from '../icons/download.svg';
 // import resume from '../resume/Lucas_Aurelio_Resume.pdf';
@@ -33,12 +33,12 @@ function Home() {
             <div className="tech-stack">
                 <span className="tech-stack-label">My Focus:</span>
                 <img src={reactIcon} alt="React" className="tech-stack-icon" title="React" />
+                <img src={nextjsIcon} alt="Next.js" className="tech-stack-icon" title="Next.js" />
                 <img src={jsIcon} alt="JavaScript" className="tech-stack-icon" title="JavaScript" />
                 <img src={typescriptIcon} alt="TypeScript" className="tech-stack-icon" title="TypeScript" />
                 <img src={htmlIcon} alt="HTML5" className="tech-stack-icon" title="HTML5" />
                 <img src={cssIcon} alt="CSS3" className="tech-stack-icon" title="CSS3" />
-                <img src={nodejsIcon} alt="Node.js" className="tech-stack-icon" title="Node.js" />
-                {/* <img src={nextjsIcon} alt="Next.js" className="tech-stack-icon" title="Next.js" /> */}
+                {/* <img src={nodejsIcon} alt="Node.js" className="tech-stack-icon" title="Node.js" /> */}
                 <img src={figmaIcon} alt="Figma" className="tech-stack-icon" title="Figma" />
             </div>
             <div className="social-links">

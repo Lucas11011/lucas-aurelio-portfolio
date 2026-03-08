@@ -2,10 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-color: #f7f7f7; /* Light background */
+  --bg-color: #f7f7f7;
+  /* Light background */
   --text-color: #000000;
-  --secondary-color: #253a58ff; /* Blue for links/active */
-  --accent-color: #253A58; /* Same as secondary for light mode */
+  --secondary-color: #253a58ff;
+  /* Blue for links/active */
+  --accent-color: #253A58;
+  /* Same as secondary for light mode */
   --footer-bg-color: var(--secondary-color);
   --border-color: #ddd;
   --font-family: 'Inter', sans-serif;
@@ -13,14 +16,15 @@
 
 .dark-mode {
   --bg-color: #333333;
-  --text-color: #eee; 
+  --text-color: #eee;
   --secondary-color: #9BB1DB;
   --accent-color: #9BB1DB;
   --footer-bg-color: #181818;
   --border-color: #444;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
@@ -151,7 +155,8 @@ body.dark-mode .theme-icon {
 /* Top Section */
 .top-section {
   display: flex;
-  flex-direction: column; /* Stack on mobile */
+  flex-direction: column;
+  /* Stack on mobile */
   align-items: center;
   margin-bottom: 148px;
   max-width: 940px;
@@ -169,6 +174,7 @@ body.dark-mode .theme-icon {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -178,11 +184,13 @@ body.dark-mode .theme-icon {
 .left-content {
   flex: 1;
   text-align: left;
-  margin-bottom: 20px; /* Space on mobile */
+  margin-bottom: 20px;
+  /* Space on mobile */
 }
 
 .right-profile {
-  margin-left: 0; /* No margin on mobile */
+  margin-left: 0;
+  /* No margin on mobile */
 }
 
 .profile-picture {
@@ -315,7 +323,7 @@ body.dark-mode .theme-icon {
   }
 
   .home-content h2 {
-    font-size:0.8em;
+    font-size: 0.8em;
   }
 
   .home-content p {
@@ -329,6 +337,7 @@ body.dark-mode .theme-icon {
   .bottom-tabs {
     gap: 30px;
   }
+
   img.theme-icon {
     margin-top: 0;
   }
@@ -386,6 +395,7 @@ body.dark-mode .theme-icon {
   .bottom-content {
     padding: 15px;
   }
+
   main.top-section {
     margin-bottom: 75px;
   }
