@@ -22,9 +22,9 @@
   transition: background-color 0.3s ease;
 }
 
-.ux-item:hover {
+/* .ux-item:hover {
   /* background-color: rgba(0, 0, 0, 0.02); */
-}
+
 
 .ux-thumbnail-wrapper {
   display: flex;
