@@ -14,7 +14,7 @@ function UX() {
             id: 1,
             thumbnail: CatInsiderFigma,
             title: 'Cat Insider',
-            description: 'Designed and compared two distinct visual directions to evaluate brand tone, hierarchy, and user engagement patterns. Built a scalable design system including color palettes, typography scales, spacing rules, and reusable UI components.',
+            description: 'Designed and compared two distinct visual directions to evaluate brand tone, hierarchy, and user engagement patterns. Built a design system including color palettes, typography scales, spacing rules, and reusable UI components.',
             link: 'https://www.figma.com/design/uJfg8unON1h4tgXiM9ycAQ/web-ll-work?node-id=0-1&t=x1krpfUYQ3wOlGbq-1',
             tools: [
                 { icon: figmaIcon, name: 'Figma' }
@@ -66,19 +66,21 @@ function UX() {
                             </div>
                         </div>
                         <div className="ux-description">
-                            <h3 className="ux-title">{project.title}</h3>
-                            <p className="ux-text">{project.description}</p>
-                            <div className="tools-row">
-                                {project.tools.map((tool, index) => (
-                                    <img
-                                        key={index}
-                                        src={tool.icon}
-                                        alt={tool.name}
-                                        title={tool.name}
-                                        className="tool-icon"
-                                    />
-                                ))}
+                            <div className="ux-title-row">
+                                <h3 className="ux-title">{project.title}</h3>
+                                <div className="ux-title-tools">
+                                    {project.tools.map((tool, index) => (
+                                        <img
+                                            key={index}
+                                            src={tool.icon}
+                                            alt={tool.name}
+                                            title={tool.name}
+                                            className="tool-icon"
+                                        />
+                                    ))}
+                                </div>
                             </div>
+                            <p className="ux-text">{project.description}</p>
                         </div>
                     </div>
                 ))}
