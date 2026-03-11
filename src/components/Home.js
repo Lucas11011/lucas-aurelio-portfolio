@@ -24,7 +24,7 @@ function Home() {
                 Lucas <span className="last-name-gradient">Aurelio</span>
             </h1>
             <p className="home-summary">
-                Software engineer building high-performance, scalable web applications with deep experience in modern frontend architecture.
+                Frontend engineer and graphic design minor who takes features from Figma mockup to deployed React/TypeScript code.
             </p>
             <div className="home-location-chip">
                 <img src={locationIcon} alt="Location" className="location-icon" title="NH / MA" />
