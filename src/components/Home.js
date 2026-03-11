@@ -33,9 +33,9 @@ function Home() {
             <div className="tech-stack">
                 <span className="tech-stack-label">My Focus:</span>
                 <img src={reactIcon} alt="React" className="tech-stack-icon" title="React" />
-                <img src={nextjsIcon} alt="Next.js" className="tech-stack-icon" title="Next.js" />
                 <img src={jsIcon} alt="JavaScript" className="tech-stack-icon" title="JavaScript" />
                 <img src={typescriptIcon} alt="TypeScript" className="tech-stack-icon" title="TypeScript" />
+                <img src={nextjsIcon} alt="Next.js" className="tech-stack-icon" title="Next.js" />
                 <img src={htmlIcon} alt="HTML5" className="tech-stack-icon" title="HTML5" />
                 <img src={cssIcon} alt="CSS3" className="tech-stack-icon" title="CSS3" />
                 {/* <img src={nodejsIcon} alt="Node.js" className="tech-stack-icon" title="Node.js" /> */}
