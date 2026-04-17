@@ -6,6 +6,7 @@ import leftArrow from '../icons/arrow-right-circle-fill.svg';
 import rightArrow from '../icons/arrow-right-circle-fill.svg';
 import boxArrowIcon from '../icons/box-arrow-up-left.svg';
 import reactIcon from '../icons/React.svg';
+import jsIcon from '../icons/JavaScript.svg';
 import viteIcon from '../icons/Vite.js.svg';
 import cssIcon from '../icons/CSS3.svg';
 import vercelIcon from '../icons/Vercel.svg';
@@ -26,6 +27,7 @@ function Projects() {
             link: 'https://crypto-tracker-dashboard-ivory.vercel.app/',
             techStack: [
                 { icon: reactIcon, name: 'React' },
+                { icon: jsIcon, name: 'JavaScript' },
                 { icon: viteIcon, name: 'Vite' },
                 { icon: cssIcon, name: 'CSS' },
                 { icon: vercelIcon, name: 'Vercel' },
@@ -40,6 +42,7 @@ function Projects() {
             link: 'https://gui-ii-studyspace.web.app/',
             techStack: [
                 { icon: reactIcon, name: 'React' },
+                { icon: jsIcon, name: 'JavaScript' },
                 { icon: cssIcon, name: 'CSS' },
                 { icon: figmaIcon, name: 'Figma' },
                 { icon: githubIcon, name: 'GitHub' },

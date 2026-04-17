@@ -28,6 +28,7 @@
 }
 
 .certification-logo {
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +59,7 @@
 
 .cert-logo-hover-icon {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%) scaleX(-1);
   width: 32px;
@@ -176,9 +177,11 @@
   .certification-description {
     text-align: center;
   }
+
   .tech-stack-row {
     padding: 0;
   }
+
   img.tech-icon {
     width: 22px;
     height: 22px;
@@ -186,12 +189,14 @@
 }
 
 @media (max-width: 560px) {
-    .certification-item {
-        margin-top: -50px;
-    }
-    p.certification-description {
+  .certification-item {
+    margin-top: -50px;
+  }
+
+  p.certification-description {
     font-size: 0.85em;
-    }
+  }
+
   img.tech-icon {
     width: 16px;
     height: 16px;
@@ -199,7 +204,7 @@
 }
 
 @media (max-width: 450px) {
-    p.certification-description {
+  p.certification-description {
     font-size: 0.65em;
-    }
+  }
 }

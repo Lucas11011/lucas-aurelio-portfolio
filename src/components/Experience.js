@@ -9,7 +9,8 @@ import tsIcon from '../icons/TypeScript.svg';
 import tailwindIcon from '../icons/Tailwind CSS.svg';
 import figmaIcon from '../icons/Figma.svg';
 import reactIcon from '../icons/React.svg';
-// import jsIcon from '../icons/JavaScript.svg';
+import mongodbIcon from '../icons/MongoDB.svg';
+import jsIcon from '../icons/JavaScript.svg';
 import htmlIcon from '../icons/HTML5.svg';
 import cssIcon from '../icons/CSS3.svg';
 import githubIcon from '../icons/GitHub.svg';
@@ -26,7 +27,7 @@ function Experience() {
             logo: sciquelLogo,
             company: 'SciQuel',
             siteUrl: 'https://sciquel.org',
-            title: 'Frontend Web Developer Intern',
+            title: 'Frontend Engineer Intern',
             subtitle: 'SciQuel | November 2025 – Present',
             text: 'Responsible for the end-to-end development of the Staff Picks feature, where staff members highlight their favorite media content with a personal quote. Designed the full UI in Figma, building it out in Next.js, React, and TypeScript, including the display page and a staff dashboard that lets authenticated users create, edit, or delete their own picks. Participated in standups and code reviews as part of an Agile workflow.',
             techStack: [
@@ -34,6 +35,7 @@ function Experience() {
                 { icon: reactIcon, name: 'React' },
                 { icon: tsIcon, name: 'TypeScript' },
                 { icon: tailwindIcon, name: 'Tailwind CSS' },
+                { icon: mongodbIcon, name: 'MongoDB' },
                 { icon: figmaIcon, name: 'Figma' },
                 // { icon: jsIcon, name: 'JavaScript' },
                 // { icon: htmlIcon, name: 'HTML5' },
@@ -52,7 +54,7 @@ function Experience() {
             techStack: [
                 { icon: reactIcon, name: 'React' },
                 { icon: figmaIcon, name: 'Figma' },
-                // { icon: jsIcon, name: 'JavaScript' },
+                { icon: jsIcon, name: 'JavaScript' },
                 { icon: htmlIcon, name: 'HTML5' },
                 { icon: cssIcon, name: 'CSS3' },
                 { icon: vercelIcon, name: 'Vercel' }

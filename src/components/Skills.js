@@ -16,6 +16,7 @@ import bootstrapIcon from '../icons/Bootstrap.svg';
 import tailwindIcon from '../icons/Tailwind CSS.svg';
 import nodeIcon from '../icons/Node.js.svg';
 import mysqlIcon from '../icons/MySQL.svg';
+import mongodbIcon from '../icons/MongoDB.svg';
 import firebaseIcon from '../icons/Firebase.svg';
 import vscodeIcon from '../icons/Visual Studio Code (VS Code).svg';
 // import filezillaIcon from '../icons/FileZilla.svg';
@@ -103,6 +104,10 @@ function Skills() {
                     <span className="skill-badge sql">
                         <img src={mysqlIcon} alt="SQL" className="skill-icon" />
                         <span className="skill-name">SQL</span>
+                    </span>
+                    <span className="skill-badge mongodb">
+                        <img src={mongodbIcon} alt="MongoDB" className="skill-icon" />
+                        <span className="skill-name">MongoDB</span>
                     </span>
                     <span className="skill-badge python">
                         <img src={pythonIcon} alt="Python" className="skill-icon" />
