@@ -167,10 +167,39 @@
   }
 
   .skill-name {
-    font-size: 0.65em;
+    font-size: 0.72em;
   }
 
   .skills-badges {
     gap: 6px;
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-content {
+    margin-top: 0;
+    gap: 18px;
+  }
+
+  .skills-category {
+    gap: 10px;
+  }
+
+  .skills-badges {
+    gap: 7px;
+  }
+
+  .skill-badge {
+    padding: 7px;
+    border-radius: 10px;
+    background: rgba(37, 58, 88, 0.08);
+  }
+
+  .dark-mode .skill-badge {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .skill-name {
+    display: none;
   }
 }

@@ -6,6 +6,8 @@
   min-height: 400px;
   padding: 40px 80px;
   margin-bottom: 60px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .arrow-button {
@@ -48,6 +50,7 @@
   flex: 1;
   max-width: 800px;
   margin: 0 auto;
+  min-width: 0;
 }
 
 .project-main.slide-out-left {
@@ -184,6 +187,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  min-width: 0;
 }
 
 .project-title {
@@ -200,7 +204,7 @@
   color: var(--text-color);
   font-size: 0.95em;
   text-align: left;
-  margin-right: 30px;
+  margin-right: 0;
   font-weight: 400;
 }
 
@@ -231,7 +235,7 @@
   position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translateX(-30%);
+  transform: translateX(-50%);
   display: flex;
   gap: 12px;
   align-items: center;
@@ -267,23 +271,27 @@
 /* Responsive */
 @media (max-width: 866px) {
   .projects-content {
-    padding: 40px 20px;
+    padding: 16px 0 44px;
+    margin-bottom: 16px;
+    min-height: auto;
   }
 
   .project-header {
-    /* flex-direction: column; */
     gap: 20px;
+    align-items: stretch;
   }
 
   .project-info {
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    margin: 0;
   }
 
   .project-thumbnail {
-    width: 80px;
-    height: 80px;
+    width: 112px;
+    height: 112px;
+    margin-top: 8px;
     margin-bottom: 0;
   }
 
@@ -302,8 +310,8 @@
 
   .tech-stack-row {
     flex-wrap: wrap;
-    margin-bottom: 30px;
-    padding-right: 165px;
+    margin-bottom: 12px;
+    padding-right: 0;
   }
 
   .tech-icon {
@@ -319,34 +327,47 @@
 @media (max-width: 650px) {
   .project-header {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     align-items: center;
-    margin-top: -20px;
+    margin-top: 0;
+    text-align: center;
   }
+
+  .project-description {
+    align-items: center;
+  }
+
+  .project-text {
+    text-align: center;
+  }
+
   .tech-stack-row {
-    padding-right: 0;
+    justify-content: center;
   }
 }
 
 @media (max-width: 560px) {
-    p.project-text {
-    font-size: 0.75em;
-    }
-  img.tech-icon {
-    width: 22px;
-    height: 22px;
+  p.project-text {
+    font-size: 0.9em;
   }
-  .tech-stack-row {
-    padding-right: 80px;
+
+  img.tech-icon {
+    width: 24px;
+    height: 24px;
   }
 }
 
 @media (max-width: 450px) {
-    h3.project-title {
+  h3.project-title {
     font-size: 1.1em;
-    }
-    p.project-title, p.project-text {
-        margin-right: 10px;
-        font-size: 0.75em;
-    }
+  }
+
+  .project-thumbnail {
+    width: 96px;
+    height: 96px;
+  }
+
+  p.project-text {
+    font-size: 0.84em;
+  }
 }

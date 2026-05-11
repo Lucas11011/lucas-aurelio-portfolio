@@ -6,6 +6,8 @@
   min-height: 400px;
   padding: 40px 80px;
   margin-bottom: 60px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .arrow-button {
@@ -48,6 +50,7 @@
   flex: 1;
   max-width: 800px;
   margin: 0 auto;
+  min-width: 0;
 }
 
 .experience-main.slide-out-left {
@@ -193,6 +196,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  min-width: 0;
 }
 
 .experience-title {
@@ -218,7 +222,7 @@
   color: var(--text-color);
   font-size: 0.95em;
   text-align: left;
-  margin-right: 30px;
+  margin-right: 0;
   font-weight: 400;
 }
 
@@ -228,7 +232,7 @@
   color: var(--text-color);
   font-size: 0.95em;
   text-align: left;
-  margin-right: 30px;
+  margin-right: 0;
 }
 
 .tech-stack-row {
@@ -258,7 +262,7 @@
   position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translateX(-30%);
+  transform: translateX(-50%);
   display: flex;
   gap: 12px;
   align-items: center;
@@ -294,23 +298,27 @@
 /* Responsive */
 @media (max-width: 766px) {
   .experience-content {
-    padding: 40px 20px;
+    padding: 16px 0 44px;
+    margin-bottom: 16px;
+    min-height: auto;
   }
 
   .experience-header {
-    /* flex-direction: column; */
     gap: 20px;
+    align-items: stretch;
   }
 
   .company-info {
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    margin: 0;
   }
 
   .company-logo {
-    width: 80px;
-    height: 80px;
+    width: 104px;
+    height: 104px;
+    margin-top: 8px;
     margin-bottom: 0;
   }
 
@@ -329,8 +337,8 @@
 
   .tech-stack-row {
     flex-wrap: wrap;
-    margin-bottom: 30px;
-    padding-right: 165px;
+    margin-bottom: 12px;
+    padding-right: 0;
   }
 
   .tech-icon {
@@ -346,33 +354,47 @@
 @media (max-width: 650px) {
   .experience-header {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     align-items: center;
-    margin-top: -20px;
+    margin-top: 0;
+    text-align: center;
   }
+
+  .experience-description {
+    align-items: center;
+  }
+
+  .experience-title,
+  .experience-subtitle,
+  .experience-text,
+  .experience-description p {
+    text-align: center;
+  }
+
   .tech-stack-row {
-    padding-right: 0;
+    justify-content: center;
   }
 }
 
 @media (max-width: 560px) {
-    p.experience-subtitle {
+  p.experience-subtitle {
     font-size: 0.85em;
-    }
+  }
+
   p.experience-text {
-    font-size: 0.75em;
+    font-size: 0.9em;
   }
+
   img.tech-icon {
-    width: 22px;
-    height: 22px;
-  }
-  .tech-stack-row {
-    padding-right: 80px;
+    width: 24px;
+    height: 24px;
   }
 }
 
 @media (max-width: 420px) {
-    p.experience-subtitle, p.experience-text {
-        margin-right: 10px;
-    }
+  p.experience-subtitle,
+  p.experience-text,
+  .experience-description p {
+    font-size: 0.84em;
+  }
 }

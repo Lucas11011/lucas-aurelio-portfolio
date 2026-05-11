@@ -241,14 +241,14 @@ h1 {
 
 @media (max-width: 580px) {
   .home-content {
-    margin-top: -10px;
-    padding: 0 6px;
+    margin-top: -6px;
+    padding: 0;
     align-items: center;
     text-align: center;
   }
 
   h1 {
-    font-size: 1.8em;
+    font-size: 2rem;
     margin-top: 0;
   }
 
@@ -258,8 +258,9 @@ h1 {
   }
 
   .home-summary {
-    font-size: 0.66em;
+    font-size: 0.92em;
     margin-top: 6px;
+    line-height: 1.65;
   }
 
   .tech-stack {
@@ -295,6 +296,7 @@ h1 {
     justify-content: center;
     width: 100%;
     max-width: 360px;
+    padding: 9px 12px;
   }
 
   .social-icon {
@@ -315,15 +317,28 @@ h1 {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .home-icon-name {
+    display: none;
+  }
 }
 
 @media (max-width: 420px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .home-eyebrow {
+    font-size: 0.68em;
+    letter-spacing: 0.08em;
+  }
+
   .home-summary {
-    font-size: 0.62em;
+    font-size: 0.88em;
   }
 
   .tech-stack-label {
-    width: auto;
+    width: 100%;
     margin-bottom: 0;
   }
 

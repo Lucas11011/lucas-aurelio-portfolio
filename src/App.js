@@ -19,6 +19,20 @@ import Certifications from './components/Certifications';
 // Import shared components
 import Footer from './components/Footer';
 
+function getUnderlineStyle(navElement, activeButton) {
+  if (!navElement || !activeButton) {
+    return {};
+  }
+
+  const navRect = navElement.getBoundingClientRect();
+  const buttonRect = activeButton.getBoundingClientRect();
+
+  return {
+    width: `${buttonRect.width}px`,
+    left: `${buttonRect.left - navRect.left}px`
+  };
+}
+
 function App() {
   // Tab navigation state for top and bottom sections
   const [activeTopTab, setActiveTopTab] = useState('Home');
@@ -34,32 +48,33 @@ function App() {
 
   const topTabsRef = useRef({});
   const bottomTabsRef = useRef({});
+  const topTabsNavRef = useRef(null);
+  const bottomTabsNavRef = useRef(null);
   const profilePictureRef = useRef(null);
   // Store underline position and width for animated tab indicators
   const [topUnderlineStyle, setTopUnderlineStyle] = useState({});
   const [bottomUnderlineStyle, setBottomUnderlineStyle] = useState({});
 
-  // Update top tab underline position on active tab change
   useEffect(() => {
-    const activeTopButton = topTabsRef.current[activeTopTab];
-    if (activeTopButton) {
-      setTopUnderlineStyle({
-        width: activeTopButton.offsetWidth + 'px',
-        left: activeTopButton.offsetLeft + 'px'
-      });
-    }
-  }, [activeTopTab]);
+    const updateUnderlines = () => {
+      setTopUnderlineStyle(
+        getUnderlineStyle(topTabsNavRef.current, topTabsRef.current[activeTopTab])
+      );
+      setBottomUnderlineStyle(
+        getUnderlineStyle(bottomTabsNavRef.current, bottomTabsRef.current[activeBottomTab])
+      );
+    };
 
-  // Update bottom tab underline position on active tab change
-  useEffect(() => {
-    const activeBottomButton = bottomTabsRef.current[activeBottomTab];
-    if (activeBottomButton) {
-      setBottomUnderlineStyle({
-        width: activeBottomButton.offsetWidth + 'px',
-        left: activeBottomButton.offsetLeft + 'px'
-      });
-    }
-  }, [activeBottomTab]);
+    updateUnderlines();
+
+    const animationFrameId = window.requestAnimationFrame(updateUnderlines);
+    window.addEventListener('resize', updateUnderlines);
+
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('resize', updateUnderlines);
+    };
+  }, [activeTopTab, activeBottomTab]);
 
   // Initialize VanillaTilt 3D effect on profile picture
   useEffect(() => {
@@ -200,7 +215,7 @@ function App() {
         <div className="mobile-profile">
           <img ref={profilePictureRef} src={ProfilePicture} alt="Profile" className="profile-picture" />
         </div>
-        <nav className="top-tabs">
+        <nav ref={topTabsNavRef} className="top-tabs">
           <button
             ref={(el) => (topTabsRef.current['Home'] = el)}
             className={activeTopTab === 'Home' ? 'active' : ''}
@@ -249,7 +264,7 @@ function App() {
       </main>
 
       <section className="bottom-section">
-        <nav className="bottom-tabs">
+        <nav ref={bottomTabsNavRef} className="bottom-tabs">
           <button
             ref={(el) => (bottomTabsRef.current['Experience'] = el)}
             className={activeBottomTab === 'Experience' ? 'active' : ''}

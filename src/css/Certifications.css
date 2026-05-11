@@ -5,6 +5,8 @@
   min-height: 500px;
   /* margin-bottom: 120px; */
   padding-top: 25px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .certifications-list {
@@ -20,11 +22,6 @@
   align-items: flex-start;
   padding: 20px;
   border-radius: 10px;
-  /* transition: background-color 0.3s ease; */
-}
-
-.certification-item:hover {
-  /* background-color: rgba(0, 0, 0, 0.02); */
 }
 
 .certification-logo {
@@ -153,21 +150,20 @@
   margin-top: 30px;
 }
 
-/* Dark mode hover effect */
-.dark-mode .certification-item:hover {
-  /* background-color: rgba(255, 255, 255, 0.05); */
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .certifications-content {
-    padding: 20px;
+    padding: 8px 0 0;
+    min-height: auto;
   }
 
   .certification-item {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 14px;
+    margin-top: 12px;
+    padding: 12px 0;
   }
 
   .certification-details {
@@ -189,22 +185,22 @@
 }
 
 @media (max-width: 560px) {
-  .certification-item {
-    margin-top: -50px;
-  }
-
   p.certification-description {
-    font-size: 0.85em;
+    font-size: 0.92em;
   }
 
   img.tech-icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .certification-logo {
+    margin-top: 8px;
   }
 }
 
 @media (max-width: 450px) {
   p.certification-description {
-    font-size: 0.65em;
+    font-size: 0.84em;
   }
 }
