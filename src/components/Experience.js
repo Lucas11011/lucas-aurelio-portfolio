@@ -28,7 +28,7 @@ function Experience() {
             company: 'SciQuel',
             siteUrl: 'https://sciquel.org',
             title: 'Frontend Engineer Intern',
-            subtitle: 'SciQuel | November 2025 – Present',
+            subtitle: 'SciQuel | November 2025 – May 2026',
             text: 'Responsible for the end-to-end development of the Staff Picks feature, where staff members highlight their favorite media content with a personal quote. Designed the full UI in Figma, building it out in Next.js, React, and TypeScript, including the display page and a staff dashboard that lets authenticated users create, edit, or delete their own picks. Participated in standups and code reviews as part of an Agile workflow.',
             techStack: [
                 { icon: NextJsIcon, name: 'Next.js' },

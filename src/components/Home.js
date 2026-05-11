@@ -24,22 +24,46 @@ function Home() {
                 Lucas <span className="last-name-gradient">Aurelio</span>
             </h1>
             <p className="home-summary">
-                Frontend engineer and graphic design minor who takes features from Figma mockup to deployed React/TypeScript code.
+                Frontend engineer bringing designs to life through pixel-perfect implementation. Passionate about building engaging user experiences.
             </p>
             <div className="home-location-chip">
-                <img src={locationIcon} alt="Location" className="location-icon" title="NH / MA" />
+                <span className="home-icon-badge">
+                    <img src={locationIcon} alt="Location" className="location-icon" />
+                    <span className="home-icon-name">NH / MA</span>
+                </span>
                 NH / MA
             </div>
             <div className="tech-stack">
                 <span className="tech-stack-label">My Focus:</span>
-                <img src={reactIcon} alt="React" className="tech-stack-icon" title="React" />
-                <img src={jsIcon} alt="JavaScript" className="tech-stack-icon" title="JavaScript" />
-                <img src={typescriptIcon} alt="TypeScript" className="tech-stack-icon" title="TypeScript" />
-                <img src={nextjsIcon} alt="Next.js" className="tech-stack-icon" title="Next.js" />
-                <img src={htmlIcon} alt="HTML5" className="tech-stack-icon" title="HTML5" />
-                <img src={cssIcon} alt="CSS3" className="tech-stack-icon" title="CSS3" />
+                <span className="home-icon-badge">
+                    <img src={reactIcon} alt="React" className="tech-stack-icon" />
+                    <span className="home-icon-name">React</span>
+                </span>
+                <span className="home-icon-badge">
+                    <img src={jsIcon} alt="JavaScript" className="tech-stack-icon" />
+                    <span className="home-icon-name">JavaScript</span>
+                </span>
+                <span className="home-icon-badge">
+                    <img src={typescriptIcon} alt="TypeScript" className="tech-stack-icon" />
+                    <span className="home-icon-name">TypeScript</span>
+                </span>
+                <span className="home-icon-badge">
+                    <img src={nextjsIcon} alt="Next.js" className="tech-stack-icon" />
+                    <span className="home-icon-name">Next.js</span>
+                </span>
+                <span className="home-icon-badge">
+                    <img src={htmlIcon} alt="HTML5" className="tech-stack-icon" />
+                    <span className="home-icon-name">HTML5</span>
+                </span>
+                <span className="home-icon-badge">
+                    <img src={cssIcon} alt="CSS3" className="tech-stack-icon" />
+                    <span className="home-icon-name">CSS3</span>
+                </span>
                 {/* <img src={nodejsIcon} alt="Node.js" className="tech-stack-icon" title="Node.js" /> */}
-                <img src={figmaIcon} alt="Figma" className="tech-stack-icon" title="Figma" />
+                <span className="home-icon-badge">
+                    <img src={figmaIcon} alt="Figma" className="tech-stack-icon" />
+                    <span className="home-icon-name">Figma</span>
+                </span>
             </div>
             <div className="social-links">
                 {/* <a href={resume} download="Lucas_Aurelio_Resume.pdf" className="social-link resume-link"> */}
