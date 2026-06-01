@@ -58,7 +58,7 @@ body.dark-mode .theme-icon {
 .App {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 24px;
   padding-bottom: 0;
 }
 
@@ -78,16 +78,17 @@ body.dark-mode .theme-icon {
   line-height: 1;
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .mobile-profile {
   display: none;
-  margin: 20px 0;
+  margin: 12px 0 4px;
 }
 
 .mobile-profile img {
-  width: 120px;
-  height: 120px;
+  width: clamp(132px, 24vw, 180px);
+  height: clamp(132px, 24vw, 180px);
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border-color);
@@ -99,6 +100,8 @@ body.dark-mode .theme-icon {
   position: relative;
   flex: 1;
   justify-content: center;
+  align-items: center;
+  min-width: 0;
 }
 
 .top-tabs button {
@@ -137,6 +140,7 @@ body.dark-mode .theme-icon {
   align-items: center;
   transition: opacity 0.3s ease;
   pointer-events: none;
+  min-width: 0;
 }
 
 .theme-icon {
@@ -156,7 +160,6 @@ body.dark-mode .theme-icon {
 .top-section {
   display: flex;
   flex-direction: column;
-  /* Stack on mobile */
   align-items: center;
   margin-bottom: 156px;
   max-width: 940px;
@@ -182,20 +185,21 @@ body.dark-mode .theme-icon {
 }
 
 .left-content {
-  flex: 1;
+  flex: 1 1 0;
+  width: 100%;
+  max-width: 600px;
   text-align: left;
-  margin-bottom: 20px;
-  /* Space on mobile */
 }
 
 .right-profile {
-  margin-left: 0;
-  /* No margin on mobile */
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .profile-picture {
-  width: 300px;
-  height: 300px;
+  width: clamp(220px, 25vw, 310px);
+  height: clamp(220px, 25vw, 310px);
   border-radius: 50%;
   object-fit: cover;
   display: flex;
@@ -266,8 +270,8 @@ body.dark-mode .theme-icon {
       "profile profile"
       "tabs tabs";
     align-items: center;
-    margin-bottom: 20px;
-    gap: 15px;
+    margin-bottom: 40px;
+    gap: 18px;
   }
 
   .domain {
@@ -285,7 +289,8 @@ body.dark-mode .theme-icon {
 
   .top-tabs {
     grid-area: tabs;
-    gap: 15px;
+    gap: 18px;
+    justify-self: center;
   }
 
   .theme-switcher {
@@ -297,9 +302,19 @@ body.dark-mode .theme-icon {
   .right-profile {
     display: none;
   }
+
+  .top-section {
+    gap: 24px;
+    margin-bottom: 104px;
+  }
+
+  .left-content {
+    max-width: 720px;
+    text-align: center;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 901px) {
   .top-section {
     flex-direction: row;
     justify-content: space-between;
@@ -308,11 +323,31 @@ body.dark-mode .theme-icon {
 
   .left-content {
     margin-right: 40px;
-    margin-bottom: 0;
   }
 
   .right-profile {
-    margin-left: 40px;
+    margin-left: 12px;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .App {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .domain {
+    font-size: 1.3em;
+  }
+
+  .top-tabs button {
+    font-size: 0.98em;
+  }
+
+  .top-content-fade {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -346,12 +381,12 @@ body.dark-mode .theme-icon {
 /* 500px breakpoint - even smaller fonts and increased padding */
 @media (max-width: 500px) {
   .App {
-    padding: 30px;
-    padding-bottom: 0px;
+    padding: 24px;
+    padding-bottom: 0;
   }
 
   .mobile-profile {
-    margin: 10px 0;
+    margin: 6px 0 0;
   }
 
   .header {
@@ -378,10 +413,14 @@ body.dark-mode .theme-icon {
 
   .top-tabs {
     gap: 12px;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
   }
 
   .top-tabs button {
     font-size: 0.85em;
+    flex: 0 0 auto;
   }
 
   .bottom-tabs {
@@ -398,6 +437,7 @@ body.dark-mode .theme-icon {
 
   main.top-section {
     margin-bottom: 75px;
+    gap: 18px;
   }
 
 }

@@ -5,7 +5,7 @@ import boxArrowIcon from '../icons/box-arrow-up-left.svg';
 import downloadIcon from '../icons/download.svg';
 // import copyIcon from '../icons/copy.svg';
 // import resume from '../resume/Lucas_Aurelio_Resume.pdf';
-import resume from '../resume/Lucas_Aurelio_Software_Engineer_Resume.pdf';
+import resume from '../resume/Lucas_Aurelio_Resume.pdf';
 
 function Contact() {
     // const [copyMessage, setCopyMessage] = useState('');

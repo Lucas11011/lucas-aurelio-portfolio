@@ -14,12 +14,12 @@ import nextjsIcon from '../icons/Next.js.png';
 import githubIcon from '../icons/GitHub.svg';
 import downloadIcon from '../icons/download.svg';
 // import resume from '../resume/Lucas_Aurelio_Resume.pdf';
-import resume from '../resume/Lucas_Aurelio_Software_Engineer_Resume.pdf';
+import resume from '../resume/Lucas_Aurelio_Resume.pdf';
 
 function Home() {
     return (
         <div className="home-content">
-            <p className="home-eyebrow">SOFTWARE ENGINEER - FRONTEND FOCUSED</p>
+            <p className="home-eyebrow">SOFTWARE ENGINEER - <span className="eyebrow-nowrap">FRONTEND FOCUSED</span></p>
             <h1>
                 Lucas <span className="last-name-gradient">Aurelio</span>
             </h1>
@@ -40,16 +40,16 @@ function Home() {
                     <span className="home-icon-name">React</span>
                 </span>
                 <span className="home-icon-badge">
-                    <img src={jsIcon} alt="JavaScript" className="tech-stack-icon" />
-                    <span className="home-icon-name">JavaScript</span>
-                </span>
-                <span className="home-icon-badge">
                     <img src={typescriptIcon} alt="TypeScript" className="tech-stack-icon" />
                     <span className="home-icon-name">TypeScript</span>
                 </span>
                 <span className="home-icon-badge">
                     <img src={nextjsIcon} alt="Next.js" className="tech-stack-icon" />
                     <span className="home-icon-name">Next.js</span>
+                </span>
+                <span className="home-icon-badge">
+                    <img src={jsIcon} alt="JavaScript" className="tech-stack-icon" />
+                    <span className="home-icon-name">JavaScript</span>
                 </span>
                 <span className="home-icon-badge">
                     <img src={htmlIcon} alt="HTML5" className="tech-stack-icon" />
