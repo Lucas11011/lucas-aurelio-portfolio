@@ -2,6 +2,7 @@
 import React from 'react';
 import '../css/UX.css';
 import CatInsiderFigma from '../imgs/cat-insider-figma.png';
+import waybackMachineFigma from '../imgs/WBMachine-thumbnail.png';
 import studySpaceFigma from '../imgs/study-space-figma.png';
 import videographerFigma from '../imgs/videographer-figma.png';
 import boxArrowIcon from '../icons/box-arrow-up-left.svg';
@@ -12,6 +13,16 @@ function UX() {
     const uxProjects = [
         {
             id: 1,
+            thumbnail: waybackMachineFigma,
+            title: 'Wayback Machine Redesign',
+            description: 'Redesigned the Wayback Machine website across eight pages with low-fidelity wireframes, high-fidelity wireframes, and mobile wireframes. The work focused on a modern, clear, and easy-to-use experience that improves navigation and readability.',
+            link: 'https://www.figma.com/design/uJfg8unON1h4tgXiM9ycAQ/web-ll-work?node-id=22-156&t=N8hIFk85cgToM5yc-1',
+            tools: [
+                { icon: figmaIcon, name: 'Figma' }
+            ]
+        },
+        {
+            id: 2,
             thumbnail: CatInsiderFigma,
             title: 'Cat Insider',
             description: 'Designed and compared two distinct visual directions to evaluate brand tone, hierarchy, and user engagement patterns. Built a design system including color palettes, typography scales, spacing rules, and reusable UI components.',
@@ -21,7 +32,7 @@ function UX() {
             ]
         },
         {
-            id: 2,
+            id: 3,
             thumbnail: studySpaceFigma,
             title: 'Study Space',
             description: 'Designed a low-distraction productivity workspace for students. I led the task management UX, iterating through user testing to improve clarity, reduce friction, and support real-time interactions in a React-based interface.',
@@ -31,7 +42,7 @@ function UX() {
             ]
         },
         {
-            id: 3,
+            id: 4,
             thumbnail: videographerFigma,
             title: 'Videographer Portfolio',
             description: 'Portfolio designs for a freelance videographer. I explored multiple layouts to highlight visual storytelling and support client discovery. The UX prioritizes large media and intuitive navigation to reduce friction when browsing work.',
