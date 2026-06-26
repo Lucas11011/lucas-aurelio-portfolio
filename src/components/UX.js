@@ -15,7 +15,7 @@ function UX() {
             id: 1,
             thumbnail: waybackMachineFigma,
             title: 'Wayback Machine Redesign',
-            description: 'Redesigned the Wayback Machine website across eight pages with low-fidelity, high-fidelity, and mobile wireframes. I also ran usability testing with professional UX designers to refine a modern, clear, and easy-to-use experience with stronger navigation and readability.',
+            description: 'Redesigned the Wayback Machine website across eight pages with low-fidelity, high-fidelity, and mobile wireframes. Conducted usability testing with professional UX designers to refine a modern, clear, and easy-to-use experience.',
             link: 'https://www.figma.com/design/uJfg8unON1h4tgXiM9ycAQ/web-ll-work?node-id=22-156&t=N8hIFk85cgToM5yc-1',
             tools: [
                 { icon: figmaIcon, name: 'Figma' }
