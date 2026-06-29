@@ -280,11 +280,11 @@ function App() {
             Projects
           </button>
           <button
-            ref={(el) => (bottomTabsRef.current['UX'] = el)}
-            className={activeBottomTab === 'UX' ? 'active' : ''}
-            onClick={() => setActiveBottomTab('UX')}
+            ref={(el) => (bottomTabsRef.current['UX Design'] = el)}
+            className={activeBottomTab === 'UX Design' ? 'active' : ''}
+            onClick={() => setActiveBottomTab('UX Design')}
           >
-            UX
+            UX Design
           </button>
           <button
             ref={(el) => (bottomTabsRef.current['Certifications'] = el)}
