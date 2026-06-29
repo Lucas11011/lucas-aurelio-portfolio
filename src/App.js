@@ -199,7 +199,7 @@ function App() {
         return <Experience />;
       case 'Projects':
         return <Projects />;
-      case 'UX':
+      case 'UX Design':
         return <UX />;
       case 'Certifications':
         return <Certifications />;
