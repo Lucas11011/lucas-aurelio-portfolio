@@ -12,11 +12,11 @@ import typescriptIcon from '../icons/TypeScript.svg';
 // import nodejsIcon from '../icons/Node.js.svg';
 import nextjsIcon from '../icons/Next.js.png';
 import githubIcon from '../icons/GitHub.svg';
-import downloadIcon from '../icons/download.svg';
+import visibleIcon from '../icons/visible.png';
 // import resume from '../resume/Lucas_Aurelio_Resume.pdf';
 import resume from '../resume/Lucas_Aurelio_Resume.pdf';
 
-function Home() {
+function Home({ onViewResume }) {
     return (
         <div className="home-content">
             <p className="home-eyebrow">SOFTWARE ENGINEER - <span className="eyebrow-nowrap">FRONTEND FOCUSED</span></p>
@@ -67,9 +67,16 @@ function Home() {
             </div>
             <div className="social-links">
                 {/* <a href={resume} download="Lucas_Aurelio_Resume.pdf" className="social-link resume-link"> */}
-                <a href={resume} download="Lucas_Aurelio_Resume_Software_Engineer.pdf" className="social-link resume-link">
-                    <span>Resume</span>
-                    <img src={downloadIcon} alt="Download" className="social-icon download-icon dark-mode-white" />
+                <a
+                    href={resume}
+                    className="social-link resume-link"
+                    onClick={(event) => {
+                        event.preventDefault();
+                        onViewResume();
+                    }}
+                >
+                    <span>View Resume</span>
+                    <img src={visibleIcon} alt="View resume" className="social-icon resume-icon" />
                 </a>
                 <a href="https://www.linkedin.com/in/lucas-aurelio-n" target="_blank" rel="noopener noreferrer" className="social-link">
                     <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />

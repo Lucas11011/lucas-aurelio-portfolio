@@ -4,6 +4,8 @@ import ScrollReveal from 'scrollreveal';
 import ProfilePicture from './imgs/lower poly avatar.png';
 import sunIcon from './icons/brightness-high.svg';
 import moonIcon from './icons/moon-stars-fill.svg';
+import downloadIcon from './icons/download.svg';
+import resume from './resume/Lucas_Aurelio_Resume.pdf';
 
 import { Analytics } from '@vercel/analytics/react';
 
@@ -37,6 +39,7 @@ function App() {
   // Tab navigation state for top and bottom sections
   const [activeTopTab, setActiveTopTab] = useState('Home');
   const [activeBottomTab, setActiveBottomTab] = useState('Experience');
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   // Dark mode toggle state (persisted)
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
@@ -111,6 +114,27 @@ function App() {
     }
   }, [isDarkMode]);
 
+  useEffect(() => {
+    if (!isResumeOpen) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsResumeOpen(false);
+      }
+    };
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isResumeOpen]);
+
   // Scroll reveal animations for top and bottom sections (run once)
   useEffect(() => {
     ScrollReveal().reveal('.header', {
@@ -182,13 +206,13 @@ function App() {
   const renderTopContent = () => {
     switch (activeTopTab) {
       case 'Home':
-        return <Home />;
+        return <Home onViewResume={() => setIsResumeOpen(true)} />;
       case 'Skills':
         return <Skills />;
       case 'Contact':
-        return <Contact />;
+        return <Contact onViewResume={() => setIsResumeOpen(true)} />;
       default:
-        return <Home />;
+        return <Home onViewResume={() => setIsResumeOpen(true)} />;
     }
   };
 
@@ -297,6 +321,52 @@ function App() {
         </nav>
         <div className="bottom-content">{renderBottomContent()}</div>
       </section>
+
+      {isResumeOpen && (
+        <div
+          className="resume-modal-backdrop"
+          role="presentation"
+          onClick={() => setIsResumeOpen(false)}
+        >
+          <div
+            className="resume-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Resume viewer"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="resume-modal-close"
+              aria-label="Close resume viewer"
+              onClick={() => setIsResumeOpen(false)}
+            >
+              ×
+            </button>
+            <div className="resume-modal-toolbar">
+              <div>
+                <p className="resume-modal-eyebrow">Resume</p>
+                <h2 className="resume-modal-title">Lucas Aurelio</h2>
+              </div>
+              <a
+                href={resume}
+                download="Lucas_Aurelio_Resume_Software_Engineer.pdf"
+                className="resume-download-link"
+              >
+                <img src={downloadIcon} alt="" className="resume-download-icon" />
+                <span>Download PDF</span>
+              </a>
+            </div>
+            <div className="resume-modal-frame">
+              <iframe
+                src={`${resume}#toolbar=1&navpanes=0&view=FitH`}
+                title="Lucas Aurelio resume"
+                className="resume-iframe"
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
       <Analytics />
