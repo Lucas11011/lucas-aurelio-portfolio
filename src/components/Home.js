@@ -67,7 +67,7 @@ function Home({ onViewResume }) {
             </div>
             <div className="social-links">
                 {/* <a href={resume} download="Lucas_Aurelio_Resume.pdf" className="social-link resume-link"> */}
-                <a
+                {/* <a
                     href={resume}
                     className="social-link resume-link"
                     onClick={(event) => {
@@ -77,16 +77,16 @@ function Home({ onViewResume }) {
                 >
                     <span>View Resume</span>
                     <img src={visibleIcon} alt="View resume" className="social-icon resume-icon" />
-                </a>
-                <a href="https://www.linkedin.com/in/lucas-aurelio-n" target="_blank" rel="noopener noreferrer" className="social-link">
+                </a> */}
+                {/* <a href="https://www.linkedin.com/in/lucas-aurelio-n" target="_blank" rel="noopener noreferrer" className="social-link">
                     <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
-                </a>
+                </a> */}
                 {/* <a href="mailto:lucas.aurelio.n@gmail.com" className="social-link">
                     <img src={gmailIcon} alt="Gmail" className="social-icon" />
                 </a> */}
-                <a href="https://github.com/Lucas11011" target="_blank" rel="noopener noreferrer" className="social-link">
+                {/* <a href="https://github.com/Lucas11011" target="_blank" rel="noopener noreferrer" className="social-link">
                     <img src={githubIcon} alt="GitHub" className="social-icon dark-mode-white" />
-                </a>
+                </a> */}
             </div>
         </div>
     );

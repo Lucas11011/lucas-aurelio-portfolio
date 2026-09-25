@@ -30,7 +30,7 @@ function Contact({ onViewResume }) {
                 </button>
                 {copyMessage && <span className="copy-message">{copyMessage}</span>}
             </p> */}
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/lucas-aurelio-n" target="_blank" rel="noopener noreferrer">
+            {/* <p>LinkedIn: <a href="https://www.linkedin.com/in/lucas-aurelio-n" target="_blank" rel="noopener noreferrer">
                 linkedin.com/in/lucas-aurelio-n <img src={boxArrowIcon} alt="" className="link-icon" />
             </a></p>
             <p>GitHub: <a href="https://github.com/Lucas11011" target="_blank" rel="noopener noreferrer">
@@ -41,7 +41,7 @@ function Contact({ onViewResume }) {
                 onViewResume();
             }}>
                 View Resume <img src={boxArrowIcon} alt="" className="link-icon" />
-            </a></p>
+            </a></p> */}
         </div>
     );
 }
