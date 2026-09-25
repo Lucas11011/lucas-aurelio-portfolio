@@ -6,17 +6,17 @@ import htmlIcon from '../icons/HTML5.svg';
 import cssIcon from '../icons/CSS3.svg';
 import figmaIcon from '../icons/Figma.svg';
 import locationIcon from '../icons/geo-alt-fill.svg';
-import linkedinIcon from '../icons/LinkedIn.svg';
+// import linkedinIcon from '../icons/LinkedIn.svg';
 // import gmailIcon from '../icons/gmail.png';
 import typescriptIcon from '../icons/TypeScript.svg';
 // import nodejsIcon from '../icons/Node.js.svg';
 import nextjsIcon from '../icons/Next.js.png';
-import githubIcon from '../icons/GitHub.svg';
-import visibleIcon from '../icons/visible.png';
+// import githubIcon from '../icons/GitHub.svg';
+// import visibleIcon from '../icons/visible.png';
 // import resume from '../resume/Lucas_Aurelio_Resume.pdf';
-import resume from '../resume/Lucas_Aurelio_Resume.pdf';
+// import resume from '../resume/Lucas_Aurelio_Resume.pdf';
 
-function Home({ onViewResume }) {
+function Home(/* { onViewResume } */) {
     return (
         <div className="home-content">
             <p className="home-eyebrow">SOFTWARE ENGINEER - <span className="eyebrow-nowrap">FRONTEND FOCUSED</span></p>
