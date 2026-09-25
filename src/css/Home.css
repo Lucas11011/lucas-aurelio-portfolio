@@ -259,44 +259,53 @@ h1 {
 
 @media (max-width: 580px) {
   .home-content {
+    gap: 14px;
     margin-top: 0;
     padding: 0;
     align-items: center;
     text-align: center;
   }
 
-  h1 {
-    font-size: 2rem;
+  .home-content h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+    line-height: 1.12;
     margin-top: 0;
+    margin-bottom: 0;
   }
 
-  .home-eyebrow {
-    font-size: 0.7em;
+  .home-content .home-eyebrow {
+    font-size: 0.68rem;
+    line-height: 1.6;
     letter-spacing: 0.1em;
   }
 
-  .home-summary {
-    font-size: 0.92em;
-    margin-top: 6px;
+  .home-content .home-summary {
+    font-size: 0.95rem;
+    max-width: 36ch;
+    margin-top: 2px;
     line-height: 1.65;
   }
 
   .tech-stack {
-    gap: 8px;
-    margin-top: 20px;
+    gap: 12px;
+    margin-top: 12px;
     justify-content: center;
   }
 
   .tech-stack-label {
-    width: auto;
+    width: 100%;
     font-size: 0.85em;
     white-space: nowrap;
     margin-right: 0;
   }
 
   .tech-stack-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-links:empty {
+    display: none;
   }
 
   .social-links {

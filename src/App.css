@@ -584,3 +584,50 @@ body.dark-mode .theme-icon {
   }
 
 }
+
+/* Phone header: compact spacing with comfortable navigation targets. */
+@media (max-width: 580px) {
+  .header {
+    margin-top: 4px;
+    margin-bottom: 28px;
+    gap: 16px;
+  }
+
+  .domain {
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+    line-height: 1.2;
+  }
+
+  .mobile-profile {
+    margin: 4px 0 0;
+  }
+
+  .mobile-profile img {
+    width: clamp(120px, 30vw, 150px);
+    height: clamp(120px, 30vw, 150px);
+  }
+
+  .top-tabs {
+    gap: 20px;
+    padding-bottom: 0;
+  }
+
+  .top-tabs button {
+    min-height: 44px;
+    padding: 8px 4px;
+    font-size: 0.95rem;
+  }
+
+  .theme-switcher {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  .theme-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
